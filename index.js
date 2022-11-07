@@ -1,9 +1,9 @@
-const fruit = [
+const fruits = [
   {
     name: "lychee",
     Color: "red",
-    Seed: 1,
-    origin: "china, malaysia",
+    Seed: [1],
+    origin: 'china, malaysia',
   },
   {
     name: "mangosteen",
@@ -26,7 +26,7 @@ const fruit = [
   {
     name: "longan",
     Color: "brown",
-    Seed: 1,
+    Seed: [1],
     origin: "china, indonesia",
   },
   {
@@ -56,7 +56,7 @@ const fruit = [
   {
     name: "jackfruit",
     Color: "yellow",
-    Seed: 100,
+    Seed: [100],
     origin: "india, malaysia",
   },
   {
@@ -67,28 +67,15 @@ const fruit = [
   },
 ];
 
-fruit.forEach((fruit) => {
+fruits.forEach((fruit) => {
   console.log(fruit.name);
   console.log(fruit);
 });
 
-const result = fruit.filter((fruit) => {
-  return fruit.Seed > 70;
+const newfruit = fruits.filter((fruit) => 
+{return fruit.Seed.length > 5;
 });
-console.log(result);
+console.log(newfruit);
 
 
 
-urtjmhyjt
-
-fruit
-  .filter((fruit) => fruit.Seed < 70)
-  .forEach((fruit) => {
-    console.log(fruit.name, fruit.Color);
-  });
-console.log(fruit);
-
-const result = fruit.filter((fruit) => {
-  return fruit.Seed.length < 100;
-});
-console.log(result);
